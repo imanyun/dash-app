@@ -19,7 +19,7 @@ diff_reviews = df['reviews'].diff().values
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 # Herokuデプロイ時に必要
-server = app.server
+# server = app.server
 
 app.layout = html.Div(children=[
     html.H2(children='PythonによるWebスクレイピング ~アプリケーション編~'),
@@ -87,5 +87,5 @@ app.layout = html.Div(children=[
     'margin':  '0 auto'
 })
 
-if __name__ == '__main__':
-    app.run_server(debug=True)
+# if __name__ == '__main__':
+#     app.run_server(debug=True)
