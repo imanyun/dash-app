@@ -9,8 +9,8 @@ def get_udemy_info():
     r = requests.get(url, timeout=10)
     #要素を抽出
     soup = BeautifulSoup(r.text, 'html.parser')
+    print(soup)
     print(soup.select('.card-title'))
-
     name = soup.select('.card-title')[0].string
 
     n_subscribers = soup.select('.subscribers')[0].string
