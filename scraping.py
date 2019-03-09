@@ -6,7 +6,7 @@ import datetime
 def get_udemy_info():
     url = 'https://scraping-for-beginner.herokuapp.com/udemy'
     #Requestsを使って、webから取得
-    r = requests.get(url)
+    r = requests.get(url, timeout=10)
     #要素を抽出
     soup = BeautifulSoup(r.text, 'html.parser')
 
@@ -23,7 +23,7 @@ def get_udemy_info():
         'n_subscribers': n_subscribers,
         'n_reviews': n_reviews
     }
-    
+
     return results
 
 def write_data():
