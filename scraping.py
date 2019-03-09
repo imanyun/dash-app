@@ -4,7 +4,7 @@ import pandas as pd
 import datetime
 
 def get_udemy_info():
-    url = 'https://scraping-for-beginner.herokuapp.com/udemy'
+    url = 'http://scraping-for-beginner.herokuapp.com/udemy'
     #Requestsを使って、webから取得
     r = requests.get(url, timeout=10)
     #要素を抽出
